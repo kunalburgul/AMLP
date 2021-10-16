@@ -8,11 +8,13 @@
 
 -- Question 1: What is the average salary for the company?
 -- Table: Salaries
+--> Query:  SELECT AVG(salary) FROM "public"."salaries"
+--> Answer: 63810.744836143706
 
-
--- Question 2: What year was the youngest person born in the company?
+-- Question 2: Who year was the youngest person born in the company?
 -- Table: employees
-
+--> Query: SELECT MIN(birth_date) FROM "public"."employees"
+--> Answer: 1952-02-01
 
 -- BEFORE YOU START
 /*
@@ -23,7 +25,8 @@
 
 -- Question 1: How many towns are there in france?
 -- Table: Towns
-
+--> Query: SELECT COUNT(id) FROM "public"."towns"
+--> Answer: 36684
 
 -- BEFORE YOU START
 /*
@@ -34,10 +37,16 @@
 
 -- Question 1: How many official languages are there?
 -- Table: countrylanguage
+--> Query: SELECT DISTINCT COUNT("language") FROM "public"."countrylanguage"
+--> Answer: 984
 
 -- Question 2: What is the average life expectancy in the world?
 -- Table: country
+--> Query: SELECT AVG(lifeexpectancy) FROM "public"."country"
+--> Answer: 66.48603611164265
 
 -- Question 3: What is the average population for cities in the netherlands?
 -- Table: city
+--> Query: SELECT AVG(population) FROM "public"."city" WHERE countrycode = 'NLD'
+--> Answer: 185001.750000000000
 
