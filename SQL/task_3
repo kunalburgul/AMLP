@@ -1,0 +1,19 @@
+/*
+* DB: Store
+* Table: Customers
+* Question: 
+* Select people either under 30 or over 50 with an income above 50000
+* Include people that are 50
+* that are from either Japan or Australia
+*/
+--> Query: SELECT firstname, lastname FROM "public"."customers"  WHERE income = 50000 AND (age < 30 OR age >=50) AND (country='Japan' OR country = 'Australia')
+--> Answer:  None
+
+/*
+* DB: Store
+* Table: Orders
+* Question: 
+* What was our total sales in June of 2004 for orders over 100 dollars?
+*/
+--> Query: SELECT SUM(totalamount) FROM "public"."orders WHERE (orderdate BETWEEN '2004-06-1' AND '2004-06-30') AND totalamount > 100
+--> Answer: 205226.06
